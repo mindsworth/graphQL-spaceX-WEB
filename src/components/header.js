@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { size } from 'polished';
+import PropTypes from 'prop-types'
 
 import { unit, colors } from '../styles';
 import dog1 from '../assets/images/dog-1.png';
@@ -29,6 +30,12 @@ export default function Header({ image, children = 'Space Explorer' }) {
       </div>
     </Container>
   );
+}
+
+Header.propTypes = {
+  Image: PropTypes.shape({
+    round: PropTypes.bool
+  })
 }
 
 /**
